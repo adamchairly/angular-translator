@@ -1,0 +1,17 @@
+<!-- header.component.html -->
+<header class="header">
+    <div class="header-content">
+      <div class="header-logo">
+
+        <span>Budget Translate</span>
+      </div>
+      <div class="header-tabs">
+        <div class="tab" [class.active]="currentView === 'yandex'" (click)="setCurrentView('yandex')">Yandex</div>
+        <div class="tab" [class.active]="currentView === 'deepl'" (click)="setCurrentView('deepl')">Deepl</div>
+        <div class="tab" [class.active]="currentView === 'wordsapi'" (click)="setCurrentView('wordsapi')">Wordsapi</div>
+        
+      </div>
+
+    </div>
+  </header>
+  

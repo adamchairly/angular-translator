@@ -1,0 +1,67 @@
+.header {
+  background: linear-gradient(to left, #1a73e8, #152b47); /* Cool gradient */
+  padding: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+.header-logo {
+  font-size: 1.8rem; /* Slightly larger font size */
+  color: white; /* White color for contrast against the gradient */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+  font-weight: bold; /* Make it bold */
+  display: flex;
+  align-items: center; /* Align logo items (if there are multiple) */
+}
+
+.header-tabs {
+  display: flex;
+  gap: 24px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff; /* White text */
+  background-color: rgba(255, 255, 255, 0.2); /* Slight white overlay */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  border: 1px solid transparent;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
+    text-decoration: none; /* No text underline */
+  }
+  
+  &.active {
+    background-color: white;
+    color: #1a73e8;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: center; /* Center on small screens */
+    .header-logo {
+      position: static; /* Static position for the logo */
+    }
+  }
+  
+  .header-tabs {
+    display: none; /* Hide tabs on small screens */
+  }
+}
+
+/* Further enhancements could include custom fonts, larger clickable areas for tabs, and more. */

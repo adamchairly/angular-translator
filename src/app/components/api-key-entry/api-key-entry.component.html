@@ -1,0 +1,19 @@
+<!-- api-key-entry.component.html -->
+<div class="api-key-form">
+    <form (ngSubmit)="onKeysSubmitted()">
+      <div>
+        <label for="yandexKey">Yandex API Key:</label>
+        <input type="text" id="yandexKey" [(ngModel)]="yandexKey" name="yandexKey" required>
+      </div>
+      <div>
+        <label for="wordsApiKey">Words API Key:</label>
+        <input type="text" id="wordsApiKey" [(ngModel)]="wordsApiKey" name="wordsApiKey" required>
+      </div>
+      <div>
+        <label for="deeplKey">Deepl API Key:</label>
+        <input type="text" id="deeplKey" [(ngModel)]="deeplKey" name="deeplKey" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

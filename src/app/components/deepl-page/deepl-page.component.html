@@ -1,0 +1,24 @@
+<div class="translator-container">
+  <div class="language-selector-container">
+    
+    <!-- Input language dropdown -->
+    <select [(ngModel)]="currentLang" class="language-selector">
+      <!-- Takes all languages from availableSourceLangs and fills up the language selector-->
+      <option *ngFor="let lang of availableSourceLangs" [value]="lang.language">{{ lang.name }}</option>
+    </select>
+
+    <!-- Target language dropdown -->
+    <select [(ngModel)]="targetLang" class="language-selector">
+      <!-- Takes all languages from availableTargetLangs and fills up the language selector-->
+      <option *ngFor="let lang of availableTargetLangs" [value]="lang.language">{{ lang.name }}</option>
+    </select>
+  </div>
+
+  <div class="text-box-container">
+    <!-- Binds inputText and translatedText to text -input -output (Two way binding)-->
+    <textarea [(ngModel)]="inputText" class="text-input"></textarea>
+    <textarea [(ngModel)]="translatedText" readonly class="text-output"></textarea>
+  </div>
+
+  <button (click)="translateText()">Translate</button>
+</div>

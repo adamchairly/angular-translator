@@ -1,0 +1,10 @@
+<app-api-key-entry *ngIf="currentView === 'api'" (keysEntered)="onApiKeysEntered()"></app-api-key-entry>
+
+<div *ngIf="currentView !== 'api'">
+    <app-header (viewChange)="onViewChange($event)"></app-header>
+  
+  <!-- ngIf used for hiding or showing the current view based on the currentView -->
+  <app-translation-page *ngIf="currentView === 'yandex'"></app-translation-page>
+  <app-deepl-page *ngIf="currentView === 'deepl'"></app-deepl-page>
+  <app-synonym-page *ngIf="currentView === 'wordsapi'"></app-synonym-page>
+</div>

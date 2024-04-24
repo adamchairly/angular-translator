@@ -1,0 +1,17 @@
+<div class="synonym-container">
+    <div class="input-field-container">
+      <textarea class="text-input" placeholder="Type a word..." [(ngModel)]="word" style="resize: none;"></textarea>
+    </div>
+
+    <div class="input-button-container">
+      <button class="button-syn" (click)="onFindSynonyms()">Find Synonyms</button>
+      <button class="button2" (click)="onFindAntonyms()">Find Antonyms</button>
+    </div>
+
+    <div class="synonyms-list-container">
+        <textarea rows="10" cols="30" readonly disabled style="resize: none;">{{ synonyms.join('\n') }}</textarea>
+        <textarea rows="10" cols="30" readonly disabled style="resize: none;">{{ antonyms.join('\n') }}</textarea>
+    </div>
+    
+  </div>
+  

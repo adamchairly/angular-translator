@@ -1,0 +1,31 @@
+<div class="translator-container">
+    <div class="language-selector-container">
+
+        <!-- Listening to user change on input language -->
+        <select [(ngModel)]="currentLang" (change)="onCurrentLangChange()" class="language-selector">
+            <option value="en">en</option>
+            <option value="de">de</option>
+            <option value="en">en</option>
+            <option value="fr">fr</option>
+            <option value="hu">hu</option>
+            <option value="it">it</option>
+            <option value="pt">pt</option>
+            <option value="ru">ru</option>
+            <option value="tr">tr</option>
+        </select>
+
+        <!-- Populating the output languages based on the input language -->
+        <select [(ngModel)]="targetLang" class="language-selector">
+            <option *ngFor="let lang of availableTargetLangs" [value]="lang">{{ lang }}</option>
+        </select>
+
+    </div>
+
+    <!-- Data binding between attributes and text input/output components-->
+    <div class="text-box-container">
+        <textarea [(ngModel)]="inputText" class="text-input"></textarea>
+        <textarea [(ngModel)]="translatedText" readonly class="text-output"></textarea>
+    </div>
+
+    <button (click)="translateText()">Translate</button>
+</div>
